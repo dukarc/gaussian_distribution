@@ -42,7 +42,8 @@ img.onload = function() {
 
 // Trigger image load. The image was originally taken from
 // https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss
-img.src = 'https://i.imgur.com/iyf2bRA.png';
+img.src = 'https://i.imgur.com/1JBBNXY.jpg'// 'https://i.imgur.com/iyf2bRA.png';
+// https://cdna.artstation.com/p/assets/images/images/002/955/808/large/nik-hagialas-cat-painting-for-computer.jpg
 
 function start() {
   ctx = canvas.getContext('2d');
@@ -63,7 +64,7 @@ function start() {
       var g = pixels[i + 1];
       var b = pixels[i + 2];
       var a = pixels[i + 3];
-      var color = chroma(r, g, b) 
+      var color = chroma(r, g, b)
       var colorKey = color.get('hsl.l')
       var pixelInfo = colorSet.get(colorKey);
       if (!pixelInfo) {
@@ -162,7 +163,7 @@ function move() {
 
   // All pixels updated on this frame, lets draw them
   ctx.putImageData(imgData, 0, 0);
-  
+
   if (!hasMore) {
     // 3 is just a trick. If current state can be only 1 or 2, then
     // assigning 3 - currentState guarantees that we flip only between
